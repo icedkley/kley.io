@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+  --color-primary: #24c19c;
+  --color-secondary: #ccf1e8;
+  --color-tertiary: #161616;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace, sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+body {
+  background-color: var(--color-tertiary);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+/* MAIN CSS */
+
+.main {
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: var(--color-primary);
+  font-size: 40px;
+  padding: 60px 0;
+}
+
+.nav {
+  display: flex;
+  color: var(--color-secondary);
+  list-style: none;
+  gap: 60px;
+  font-size: 18px;
+}
+
+.nav li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hero-section {
+  color: var(--color-primary);
+  font-size: 32px;
+  padding: 5rem 0;
+}
+
+/* SECTION WRAPPER */
+
+.section-wrapper {
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+
+.section {
+  display: flex;
+}
+
+.section-tag {
+  width: 50%;
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-size: 24px;
+}
+
+.description {
+  color: var(--color-secondary);
+  width: 100%;
+  font-size: 16px;
+}
+
+.about {
+  font-size: 20px;
+}
+
+.skills,
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.skills h1,
+.projects h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.projects h1:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* SNAP STYLES START */
+.scroller {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  height: 200vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: center;
+}
+
+/* FOOTER STYLES START */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #000;
+  padding: 2rem;
+  color: rgb(177, 177, 177);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .main,
+  .section-wrapper {
+    padding: 1rem;
+    display: flex;
+  }
+
+  .scroller {
+  }
+
+  #greet {
+    color: red;
+  }
+
+  .section-wrapper h1 {
+    font-size: 24px;
+  }
+
+  .section-wrapper {
+    gap: 15rem;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  #greet {
+    font-size: 36px;
+  }
+
+  .tag {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
