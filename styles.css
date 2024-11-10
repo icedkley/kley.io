@@ -159,7 +159,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .main,
   .section-wrapper {
     padding: 1rem;
@@ -170,7 +170,11 @@ footer {
   }
 
   #greet {
-    color: red;
+    font-weight: 900;
+  }
+
+  .tab {
+    display: none;
   }
 
   .section-wrapper h1 {
@@ -181,16 +185,8 @@ footer {
     gap: 15rem;
   }
 
-  .logo {
-    font-size: 24px;
-  }
-
   .nav {
     display: none;
-  }
-
-  #greet {
-    font-size: 36px;
   }
 
   .tag {
@@ -199,5 +195,105 @@ footer {
 
   p {
     font-size: 12px;
+  }
+}
+
+/* UPDATE CSS 11/05/24 */
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.skill-list h1 {
+  border: 1px solid #24c19c;
+  padding: 4px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.mysql {
+  width: 64px;
+  height: 64px;
+}
+
+@media (max-width: 700px) {
+  .skill-list {
+    grid-template-columns: 1fr; /* Change to one column */
+  }
+
+  .section-tag {
+    width: auto;
+  }
+  /* 
+  #typed-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  } */
+
+  .projects h1 {
+    font-size: 24px;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .mysql {
+    width: 32px;
+    height: 32px;
+  }
+
+  .skills,
+  .projects {
+    gap: 1rem;
+  }
+
+  .tag {
+    padding: 10px 0;
+  }
+
+  .scroller {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    height: 200vh;
+    scroll-snap-type: none;
+  }
+
+  .nav {
+    display: flex;
+    gap: 10px;
+  }
+
+  .nav li {
+    border: 1px solid #ccf1e8;
+    padding: 2px;
+  }
+
+  .tab {
+    display: none;
+  }
+
+  .hero-section {
+    color: var(--color-primary);
+    font-size: 24px;
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .projects h1 {
+    font-size: 22px;
   }
 }
